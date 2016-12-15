@@ -10,7 +10,8 @@ public class DesignByContract2 {
         Account a1 = b.addAccount(c1);
         Account a2 = b.addAccount(c2);
 
-        b.move((double) 100, a1, a2);
+//        should fail:
+        b.move((double) -100, a1, a2);
 
         for (Account a : b.getAccounts()) {
             System.out.println(a.getOwner().getName() + ": " + a.getBalance());

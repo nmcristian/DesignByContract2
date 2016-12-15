@@ -2,6 +2,9 @@ package designbycontract2;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.jmlspecs.annotation.Requires;
+import org.jmlspecs.annotation.Ensures;
+import org.jmlspecs.annotation.Invariant;
 
 public class Bank {
 
@@ -9,6 +12,12 @@ public class Bank {
     private List<Customer> customers;
     private List<Account> accounts;
 
+//    invariant_to_be_created: sum of all accounts.balance == 0.0
+
+    //@ assignable name;
+    //@ ensures name != null;
+    //@ ensures customers != null;
+    //@ ensures accounts != null;
     public Bank(String name) {
         this.name = name;
         this.customers = new ArrayList<>();
@@ -34,11 +43,16 @@ public class Bank {
     public Boolean removeAccount(Account a) {
         return accounts.remove(a);
     }
-    
+
     public List<Account> getAccounts() {
         return accounts;
     }
 
+    //@ requires amount > 0;
+    //@ requires source != null;
+    //@ requires target != null;
+    //@ requires source != target;
+    //@ ensures \result == true;
     public Boolean move(double amount, Account source, Account target) {
         source.saveDebit(amount, target);
         target.saveCredit(amount, source);

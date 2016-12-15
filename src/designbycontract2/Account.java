@@ -28,7 +28,7 @@ public class Account {
     public double getBalance() {
         return balance;
     }
-    
+
     public Customer getOwner() {
         return owner;
     }
