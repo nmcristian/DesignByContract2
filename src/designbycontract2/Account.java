@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class Account {
 
-    private static Long idGen;
+    private static Long idGen = (long) 0;
     private Long id;
     private double balance;
     private ArrayList<Movement> credits, debits;
@@ -27,6 +27,14 @@ public class Account {
 
     public double getBalance() {
         return balance;
+    }
+    
+    public Customer getOwner() {
+        return owner;
+    }
+
+    public Bank getBank() {
+        return bank;
     }
 
     public Movement saveCredit(Double d, Account from) {

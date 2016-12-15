@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Customer {
 
-    private static Long idGen;
+    private static Long idGen = (long) 0;
     private Long id;
     private String name;
     private ArrayList<Account> accounts;
@@ -15,6 +15,10 @@ public class Customer {
         this.name = name;
         this.bank = b;
         this.accounts = new ArrayList<>();
+    }
+
+    public String getName() {
+        return name;
     }
 
     public Boolean addAccount(Account acc) {

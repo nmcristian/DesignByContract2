@@ -34,6 +34,10 @@ public class Bank {
     public Boolean removeAccount(Account a) {
         return accounts.remove(a);
     }
+    
+    public List<Account> getAccounts() {
+        return accounts;
+    }
 
     public Boolean move(double amount, Account source, Account target) {
         source.saveDebit(amount, target);

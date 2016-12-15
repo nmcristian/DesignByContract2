@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Movement {
 
-    private static Long idGen;
+    private static Long idGen = (long) 0;
     private Long id;
     private Date date;
     private double amount;
