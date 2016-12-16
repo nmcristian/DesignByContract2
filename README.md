@@ -8,3 +8,7 @@ http://jmlspecs.sourceforge.net/checks.shtml
 https://verify.iaik.tugraz.at/teaching/vt/pub/Main/WebHome/vtxx_-_static_checking.pdf
 http://www.kindsoftware.com/documents/tutorials/slides/1_intro_jml.pdf
 http://cic.puj.edu.co/wiki/lib/exe/fetch.php?media=materias:lecture08-tmis-jml-v2.pdf
+
+later update:
+http://www.openjml.org/downloads/
+seems to work to be installed in Eclipse, but I couldn't make it work there neither.
